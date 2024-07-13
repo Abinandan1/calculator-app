@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan";
+}
+:root {
+  /* 
+  =================
+  THEME 1 
+  =================
+  */
+  /* BG */
+  --blue-bg-1-100: hsl(222, 26%, 31%);
+  --blue-bg-1-200: hsl(223, 31%, 20%);
+  --blue-bg-1-300: hsl(224, 36%, 15%);
+  /* KEYS */
+  --blue-keys-1: hsl(225, 21%, 49%);
+  --blue-keys-shadow-1: hsl(224, 28%, 35%);
+  --red-1: hsl(6, 63%, 50%);
+  --dark-red-1: hsl(6, 70%, 34%);
+  --light-grayish-orange-1: hsl(30, 25%, 89%);
+  --grayish-orange-shadow-1: hsl(28, 16%, 65%);
+  /* TEXT */
+  --very-dark-grayish-blue-1: hsl(221, 14%, 31%);
+  --white: hsl(0, 0%, 100%);
+
+  /* 
+  =================
+  THEME 2 
+  =================
+  */
+  /* BG */
+  --light-gray-2: hsl(0, 0%, 90%);
+  --grayish-red-2: hsl(0, 5%, 81%);
+  --very-light-gray-2: hsl(0, 0%, 93%);
+  /* KEYS */
+  --dark-moderate-cyan-2: hsl(185, 42%, 37%);
+  --very-dark-cyan-2: hsl(185, 58%, 25%);
+  --orange-2: hsl(25, 98%, 40%);
+  --dark-orange-2: hsl(25, 99%, 27%);
+  --light-grayish-yellow-2: hsl(45, 7%, 89%);
+  --dark-grayish-orange-2: hsl(35, 11%, 61%);
+  /* TEXT */
+  --very-dark-grayish-yellow: hsl(60, 10%, 19%);
+
+  /* 
+  =================
+  THEME 3 
+  =================
+  */
+  /* BG */
+  --very-dark-violet-3: hsl(268, 75%, 9%);
+  --dark-violet-3: hsl(268, 71%, 12%);
+  /* KEYS */
+  --violet-3: hsl(281, 89%, 26%);
+  --vivid-magenta-3: hsl(285, 91%, 52%);
+  --pure-cyan-3: hsl(176, 100%, 44%);
+  --soft-cyan-3: hsl(177, 92%, 70%);
+  --very-dark-violet-keys-3: hsl(268, 47%, 21%);
+  --dark-magenta-3: hsl(290, 70%, 36%);
+  /* TEXT */
+  --light-yellow-3: hsl(52, 100%, 62%);
+  --very-dark-blue-3: hsl(198, 20%, 13%);
+
+  --main-bg: var(--blue-bg-1-100);
+  --keypad-toggle-bg: var(--blue-bg-1-200);
+  --screen-bg: var(--blue-bg-1-300);
+  --delete-reset-keys-bg: var(--blue-keys-1);
+  --delete-reset-keys-shadow: var(--blue-keys-shadow-1);
+  --equals-key-bg: var(--red-1);
+  --equals-key-shadow: var(--dark-red-1);
+  --primary-keys-bg: var(--light-grayish-orange-1);
+  --primary-keys-shadow: var(--grayish-orange-shadow-1);
+  --header-text-color: var(--white);
+  --primary-text-color: var(--very-dark-grayish-blue-1);
+  --secondary-text-color: var(--white);
+}
+
+.theme-1 {
+  --main-bg: var(--blue-bg-1-100);
+  --keypad-toggle-bg: var(--blue-bg-1-200);
+  --screen-bg: var(--blue-bg-1-300);
+  --delete-reset-keys-bg: var(--blue-keys-1);
+  --delete-reset-keys-shadow: var(--blue-keys-shadow-1);
+  --equals-key-bg: var(--red-1);
+  --equals-key-shadow: var(--dark-red-1);
+  --primary-keys-bg: var(--light-grayish-orange-1);
+  --primary-keys-shadow: var(--grayish-orange-shadow-1);
+  --header-text-color: var(--white);
+  --primary-text-color: var(--very-dark-grayish-blue-1);
+  --secondary-text-color: var(--white);
+}
+.theme-2 {
+  --main-bg: var(--light-gray-2);
+  --keypad-toggle-bg: var(--grayish-red-2);
+  --screen-bg: var(--very-light-gray-2);
+  --delete-reset-keys-bg: var(--dark-moderate-cyan-2);
+  --delete-reset-keys-shadow: var(--very-dark-cyan-2);
+  --equals-key-bg: var(--orange-2);
+  --equals-key-shadow: var(--dark-orange-2);
+  --primary-keys-bg: var(--light-grayish-yellow-2);
+  --primary-keys-shadow: var(--dark-grayish-orange-2);
+  --header-text-color: var(--very-dark-grayish-yellow);
+  --primary-text-color: var(--very-dark-grayish-yellow);
+  --secondary-text-color: var(--white);
+}
+.theme-3 {
+  --main-bg: var(--very-dark-violet-3);
+  --keypad-toggle-bg: var(--dark-violet-3);
+  --screen-bg: var(--dark-violet-3);
+  --delete-reset-keys-bg: var(--violet-3);
+  --delete-reset-keys-shadow: var(--vivid-magenta-3);
+  --equals-key-bg: var(--pure-cyan-3);
+  --equals-key-shadow: var(--soft-cyan-3);
+  --primary-keys-bg: var(--very-dark-violet-keys-3);
+  --primary-keys-shadow: var(--dark-magenta-3);
+  --header-text-color: var(--light-yellow-3);
+  --primary-text-color: var(--light-yellow-3);
+  --secondary-text-color: var(--white);
+}
+/* 
+==================
+MAIN 
+==================
+*/
+main {
+  background: var(--main-bg);
+  min-height: 100vh;
+  padding: 2.5rem 1.5rem;
+  display: grid;
+  align-content: start;
+}
+/* 
+==================
+HEADER 
+==================
+*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--header-text-color);
+  margin-bottom: 2rem;
+}
+header h3 {
+  font-size: 2rem;
+}
+/* TOGGLE THEMES */
+.theme-container {
+  display: grid;
+  grid-template-areas:
+    "v a"
+    "b c";
+  gap: 0.25rem;
+  align-items: center;
+}
+.theme-numbers {
+  grid-area: a;
+  display: flex;
+  justify-content: space-around;
+}
+.theme-container > p {
+  grid-area: b;
+}
+.theme-container p {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.theme-btn-container {
+  grid-area: c;
+  width: 5rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  padding: 0.25rem;
+  background: var(--keypad-toggle-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.theme-btn-container input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+input[id="1"] {
+  left: 6px;
+}
+input[id="2"] {
+  left: 33px;
+}
+input[id="3"] {
+  left: 62px;
+}
+span {
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  background: var(--equals-key-bg);
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  left: 5px;
+}
+input[id="1"]:checked ~ span {
+  left: 5px;
+}
+input[id="2"]:checked ~ span {
+  left: 30px;
+}
+input[id="3"]:checked ~ span {
+  left: 60px;
+}
+/* 
+==================
+OUTPUT 
+==================
+*/
+.output {
+  margin-bottom: 2rem;
+}
+.output input {
+  height: 5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  background: var(--screen-bg);
+  color: var(--header-text-color);
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: right;
+}
+/* 
+==================
+KEYPAD 
+==================
+*/
+
+.keypad {
+  background: var(--keypad-toggle-bg);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* justify-items: center; */
+  gap: 1.5rem;
+}
+.key {
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 0px 0px var(--primary-keys-shadow);
+  background: var(--primary-keys-bg);
+  /* width: clamp(4rem, 15vw, 7rem); */
+  height: 4rem;
+  color: var(--primary-text-color);
+  font-weight: 700;
+  border: none;
+  position: relative;
+}
+.key:nth-child(4) {
+  color: var(--secondary-text-color);
+  background: var(--delete-reset-keys-bg);
+  box-shadow: 0px 4px 0px 0px var(--delete-reset-keys-shadow);
+  font-size: 1.5rem;
+}
+.key:nth-child(17) {
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  color: var(--secondary-text-color);
+  background: var(--delete-reset-keys-bg);
+  box-shadow: 0px 4px 0px 0px var(--delete-reset-keys-shadow);
+  font-size: 1.5rem;
+}
+.key:nth-child(18) {
+  width: 100%;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  color: var(--secondary-text-color);
+  background: var(--equals-key-bg);
+  box-shadow: 0px 4px 0px 0px var(--equals-key-shadow);
+  font-size: 1.5rem;
+}
+
+header,
+.output,
+.keypad {
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+aside {
+  position: fixed;
+  display: grid;
+  top: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
+  min-height: 2rem;
+  width: 50%;
+  border-left: 10px solid var(--red-1);
+  transition: top 0.3s ease-in;
+  max-width: 400px;
+}
+.notify {
+  top: 2rem;
+}
+.message {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
